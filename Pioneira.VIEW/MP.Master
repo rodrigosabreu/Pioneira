@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MP.master.cs" Inherits="Pioneira.MP" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <link href="Css/Estilo.css" rel="stylesheet" type="text/css" />
+    </head>
+<body>
+<form id="form1" runat="server">  
+<div class="topo"></div>
+<div class="barra" runat="server"><strong>Cliente:</strong>&nbsp;<asp:Label ID="lbl_nomeCliente" 
+        runat="server"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp; <strong><a href="Sair.aspx">Sair</a></strong></div>
+
+<div class="rei"> 
+    <div class="menu">
+        <div class="menubv">  
+	        <ul>Menu</ul> 
+            
+            <asp:TreeView ID="TreeView1" runat="server">
+                <Nodes>
+                    <asp:TreeNode Text="Boletos" Value="Emissão de boletos" 
+                        NavigateUrl="~/Boletos.aspx">
+                    </asp:TreeNode>
+                    <asp:TreeNode Text="Notas Fiscais" Value="Notas Fiscais" 
+                        NavigateUrl="~/Notas.aspx"></asp:TreeNode>
+                    <asp:TreeNode NavigateUrl="~/Manifesto.aspx" Text="Manifestos (OS)" 
+                        Value="Serviços"></asp:TreeNode>
+                    <asp:TreeNode NavigateUrl="~/Servicos.aspx" Text="Serviços" Value="Serviços">
+                    </asp:TreeNode>
+                    <asp:TreeNode NavigateUrl="~/MsgPioneira.aspx" Text="Mensagem p/ Pioneira" 
+                        Value="Mensagem p/ Pioneira"></asp:TreeNode>
+                    <asp:TreeNode Text="Alterar Senha" Value="Alterar Senha">
+                        <asp:TreeNode NavigateUrl="~/SenhaAdmin.aspx" Text="Administrador" 
+                            Value="Administrador"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/SenhaUser.aspx" Text="Usuários" Value="Usuários">
+                        </asp:TreeNode>
+                    </asp:TreeNode>
+                </Nodes>
+            </asp:TreeView>          
+
+        </div>               
+    </div>    
+
+    <div>
+         
+        <div style="text-align: center">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">        
+
+            
+
+        </asp:ContentPlaceHolder>
+        </div>
+        
+    </div>
+
+</div>
+
+ </form> 
+
+    
+</body>
+</html>

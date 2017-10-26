@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s0="http://android" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://android" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://android">
+      <s:element name="GETBOLETO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LOJA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETBOLETORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETBOLETORESULT" type="s0:WSBOLETOAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETBOLETODETALHE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LOJA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NUMERO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PREFIXO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETBOLETODETALHERESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETBOLETODETALHERESULT" type="s0:WSBOLETODETALHEAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETCLIENTE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CNPJ" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETCLIENTERESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETCLIENTERESULT" type="s0:WSCLIENTEAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETMANIFESTO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETMANIFESTORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETMANIFESTORESULT" type="s0:WSMANIFESTOAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETMANIFESTOCLIENTE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LOJA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATAINICIAL" type="s:date" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATAFINAL" type="s:date" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETMANIFESTOCLIENTERESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETMANIFESTOCLIENTERESULT" type="s0:WSMANIFESTOCLIENTEAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETMANIFESTOCLIENTEDETALHE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LOJA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MANIFESTO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETMANIFESTOCLIENTEDETALHERESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETMANIFESTOCLIENTEDETALHERESULT" type="s0:WSMANIFESTOCLIENTEDETALHEAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETMOTORISTA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETMOTORISTARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETMOTORISTARESULT" type="s0:WSMOTORISTAAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETNOTAFISCAL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LOJA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATAINICIAL" type="s:date" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATAFINAL" type="s:date" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETNOTAFISCALRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETNOTAFISCALRESULT" type="s0:WSNOTAFISCALAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETSERVICO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LOJA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETSERVICORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETSERVICORESULT" type="s0:WSSERVICOAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETSERVICODETALHE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LOJA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOSERVICO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETSERVICODETALHERESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETSERVICODETALHERESULT" type="s0:WSSERVICODETALHEAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETVEICULO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETVEICULORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETVEICULORESULT" type="s0:WSVEICULOAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDCODIGOACESSO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LOJA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSONOVO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDCODIGOACESSORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UPDCODIGOACESSORESULT" type="s0:WSUPDCODIGOACESSOAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDCODIGOACESSOADM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LOJA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSONOVO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDCODIGOACESSOADMRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UPDCODIGOACESSOADMRESULT" type="s0:WSUPDCODIGOACESSOADMAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDCOLETA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MANIFESTO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="QTEQUIPAMENTO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="VEICULOCOLETOR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="KMVEICULOCOLETOR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DTHRCHEGADANOCLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DTHRSAIDADOCLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OBSCOLETA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDCOLETARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UPDCOLETARESULT" type="s0:WSCOLETAAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDDESTINACAO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MANIFESTO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="VEICULODESTINACAO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="KMVEICULODESTINACAO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TICKETPESAGEM" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PESO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DTHRDEPOSICAO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OBSCOLETA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDDESTINACAORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UPDDESTINACAORESULT" type="s0:WSCOLETAAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDMANIFESTO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PASSWORD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CLIENTE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LOJA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOACESSO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DATASOLICITACAO" type="s:date" />
+            <s:element minOccurs="1" maxOccurs="1" name="CODIGOSERVICO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="OBSERVACAO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UPDMANIFESTORESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UPDMANIFESTORESULT" type="s0:WSUPDMANIFESTOAMBIENTAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WSBOLETOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BOLETOAMBIENTALLIST" type="s0:ARRAYOFINFOBOLETOAMBIENTAL" />
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSBOLETODETALHEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BOLETODETALHEAMBIENTALLIST" type="s0:ARRAYOFINFOBOLETODETALHEAMBIENTAL" />
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSCLIENTEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CLIENTEAMBIENTALLIST" type="s0:ARRAYOFINFOCLIENTEAMBIENTAL" />
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSUPDCODIGOACESSOADMAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSUPDCODIGOACESSOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSCOLETAAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSMANIFESTOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MANIFESTOAMBIENTALLIST" type="s0:ARRAYOFINFOMANIFESTOAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSMANIFESTOCLIENTEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MANIFESTOCLIENTEAMBIENTALLIST" type="s0:ARRAYOFINFOMANIFESTOCLIENTEAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSMANIFESTOCLIENTEDETALHEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MANIFESTOCLIENTEDETALHEAMBIENTALLIST" type="s0:ARRAYOFINFOMANIFESTOCLIENTEDETALHEAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSMOTORISTAAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MOTORISTAAMBIENTALLIST" type="s0:ARRAYOFINFOMOTORISTAAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSNOTAFISCALAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NOTAFISCALAMBIENTALLIST" type="s0:ARRAYOFINFONOTAFISCALAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSSERVICOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SERVICOAMBIENTALLIST" type="s0:ARRAYOFINFOSERVICOAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSSERVICODETALHEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SERVICODETALHEAMBIENTALLIST" type="s0:ARRAYOFINFOSERVICODETALHEAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSUPDMANIFESTOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WSVEICULOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VEICULOAMBIENTALLIST" type="s0:ARRAYOFINFOVEICULOAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="INFOBOLETOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NUMERO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PREFIXO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VALOR" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="VENCIMENTO" type="s:date" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="INFOBOLETODETALHEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AGENCIACEDENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BAIRROCOB" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CARTEIRA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CEPCOB" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CNPJCEDENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CODBANCO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGOCEDENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONTACEDENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONVENIO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CPFCNPJSACADO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAEMISSAO" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAMOVIMENTO" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAVENCIMENTO" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="DIGITOCEDENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ENDCOB" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ESPECIEBB" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MUNCOB" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NOMECEDENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NOMESACADO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NOSSONUMERO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NUMERODOCUMENTO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TEXTO1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TEXTO2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TEXTO3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UFCOB" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VALOR" type="s:float" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="INFOCLIENTEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CNPJ" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LOJA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NOME" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="INFOMANIFESTOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CLIENTELOJA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGOSERVICO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CSTATUS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATALANCAMENTO" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="DESTINACAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTHRCHEGADACLIENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTHRDEPOSICAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTHRSAIDACLIENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="KMVEICULOCOLETA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="KMVEICULODESTINACAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MANIFESTO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NRTICKET" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OBSCOLETA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OBSDEPOSICAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PESO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="QTDEEQUIPAMENTO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="USUARIOCOLETA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="USUARIODEPOSICAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VEICULOCOLETA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VEICULODESTINACAO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="INFOMANIFESTOCLIENTEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGOSERVICO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATALANCAMENTO" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="MANIFESTO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MENSAGEM" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="INFOMANIFESTOCLIENTEDETALHEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CLIENTELOJA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGOSERVICO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATALANCAMENTO" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="DESTINACAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTHRCHEGADACLIENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTHRDEPOSICAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTHRSAIDACLIENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="KMVEICULOCOLETA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="KMVEICULODESTINACAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MANIFESTO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MENSAGEM" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NRTICKET" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OBSCOLETA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OBSDEPOSICAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OBSERVACAOCLIENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OBSERVACAOPIONEIRA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PESO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="QTDEEQUIPAMENTO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="USUARIOCOLETA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="USUARIODEPOSICAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VEICULOCOLETA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VEICULODESTINACAO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="INFOMOTORISTAAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NOME" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="INFONOTAFISCALAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EMISSAO" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="NUMERO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SERIE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VALORTOTAL" type="s:float" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="INFOSERVICOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGOSERVICO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESIDUO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="INFOSERVICODETALHEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ATIVIDADE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BACIA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRIDESTINO1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRIDESTINO2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRIDESTINO3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRIDESTINO4" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRIDESTINO5" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRIDESTINO6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRINUMERO1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRINUMERO2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRINUMERO3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRINUMERO4" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRINUMERO5" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRINUMERO6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CADRIPADRAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CARGOCONTATO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CARGORESPONSAVEL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGOLOJACLIENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGOSERVICO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGOVEICULO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONTATO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATACONTRATO" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATACORRECAO" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAVALIDADELIMPURB" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="DDDCELULAR" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EMAILCONTATO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EMAILRESPONSAVEL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HORARIOATENDIMENTO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDICECORRECAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="KMDISTANCIA" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="LIMPURB" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LOCALIZACAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NOMECLIENTE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NRDIASFUNCIONAMENTOANO" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="NRFUNCIONARIOSADMINISTRATIVO" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="NRFUNCIONARIOSPRODUCAO" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="NRMESESFUNCIONAMENTOANO" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="NUMEROCELULAR" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NUMEROCONTRATO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OBSEXTERNOS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OBSINTERNOS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PESO" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="PORPESO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="QTDEEQUIPAMENTOS" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESIDUO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESIDUO1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESIDUO10" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESIDUO2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESIDUO3" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESIDUO4" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESIDUO5" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESIDUO6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESIDUO7" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESIDUO8" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESIDUO9" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESPONSAVEL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SERVICO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TRANSPORTADOR" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VOLUMEAUTOMATICO" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="VOLUMECOLETA" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="VOLUMEEQUIPAMENTO" type="s:float" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="INFOVEICULOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGOVEICULO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PLACA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TIPO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFINFOBOLETOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="INFOBOLETOAMBIENTAL" type="s0:INFOBOLETOAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFINFOBOLETODETALHEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="INFOBOLETODETALHEAMBIENTAL" type="s0:INFOBOLETODETALHEAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFINFOCLIENTEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="INFOCLIENTEAMBIENTAL" type="s0:INFOCLIENTEAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFINFOMANIFESTOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="INFOMANIFESTOAMBIENTAL" type="s0:INFOMANIFESTOAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFINFOMANIFESTOCLIENTEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="INFOMANIFESTOCLIENTEAMBIENTAL" type="s0:INFOMANIFESTOCLIENTEAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFINFOMANIFESTOCLIENTEDETALHEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="INFOMANIFESTOCLIENTEDETALHEAMBIENTAL" type="s0:INFOMANIFESTOCLIENTEDETALHEAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFINFOMOTORISTAAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="INFOMOTORISTAAMBIENTAL" type="s0:INFOMOTORISTAAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFINFONOTAFISCALAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="INFONOTAFISCALAMBIENTAL" type="s0:INFONOTAFISCALAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFINFOSERVICOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="INFOSERVICOAMBIENTAL" type="s0:INFOSERVICOAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFINFOSERVICODETALHEAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="INFOSERVICODETALHEAMBIENTAL" type="s0:INFOSERVICODETALHEAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFINFOVEICULOAMBIENTAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="INFOVEICULOAMBIENTAL" type="s0:INFOVEICULOAMBIENTAL" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="GETBOLETOSOAPIN">
+    <part name="parameters" element="s0:GETBOLETO" />
+  </message>
+  <message name="GETBOLETOSOAPOUT">
+    <part name="parameters" element="s0:GETBOLETORESPONSE" />
+  </message>
+  <message name="GETBOLETODETALHESOAPIN">
+    <part name="parameters" element="s0:GETBOLETODETALHE" />
+  </message>
+  <message name="GETBOLETODETALHESOAPOUT">
+    <part name="parameters" element="s0:GETBOLETODETALHERESPONSE" />
+  </message>
+  <message name="GETCLIENTESOAPIN">
+    <part name="parameters" element="s0:GETCLIENTE" />
+  </message>
+  <message name="GETCLIENTESOAPOUT">
+    <part name="parameters" element="s0:GETCLIENTERESPONSE" />
+  </message>
+  <message name="GETMANIFESTOSOAPIN">
+    <part name="parameters" element="s0:GETMANIFESTO" />
+  </message>
+  <message name="GETMANIFESTOSOAPOUT">
+    <part name="parameters" element="s0:GETMANIFESTORESPONSE" />
+  </message>
+  <message name="GETMANIFESTOCLIENTESOAPIN">
+    <part name="parameters" element="s0:GETMANIFESTOCLIENTE" />
+  </message>
+  <message name="GETMANIFESTOCLIENTESOAPOUT">
+    <part name="parameters" element="s0:GETMANIFESTOCLIENTERESPONSE" />
+  </message>
+  <message name="GETMANIFESTOCLIENTEDETALHESOAPIN">
+    <part name="parameters" element="s0:GETMANIFESTOCLIENTEDETALHE" />
+  </message>
+  <message name="GETMANIFESTOCLIENTEDETALHESOAPOUT">
+    <part name="parameters" element="s0:GETMANIFESTOCLIENTEDETALHERESPONSE" />
+  </message>
+  <message name="GETMOTORISTASOAPIN">
+    <part name="parameters" element="s0:GETMOTORISTA" />
+  </message>
+  <message name="GETMOTORISTASOAPOUT">
+    <part name="parameters" element="s0:GETMOTORISTARESPONSE" />
+  </message>
+  <message name="GETNOTAFISCALSOAPIN">
+    <part name="parameters" element="s0:GETNOTAFISCAL" />
+  </message>
+  <message name="GETNOTAFISCALSOAPOUT">
+    <part name="parameters" element="s0:GETNOTAFISCALRESPONSE" />
+  </message>
+  <message name="GETSERVICOSOAPIN">
+    <part name="parameters" element="s0:GETSERVICO" />
+  </message>
+  <message name="GETSERVICOSOAPOUT">
+    <part name="parameters" element="s0:GETSERVICORESPONSE" />
+  </message>
+  <message name="GETSERVICODETALHESOAPIN">
+    <part name="parameters" element="s0:GETSERVICODETALHE" />
+  </message>
+  <message name="GETSERVICODETALHESOAPOUT">
+    <part name="parameters" element="s0:GETSERVICODETALHERESPONSE" />
+  </message>
+  <message name="GETVEICULOSOAPIN">
+    <part name="parameters" element="s0:GETVEICULO" />
+  </message>
+  <message name="GETVEICULOSOAPOUT">
+    <part name="parameters" element="s0:GETVEICULORESPONSE" />
+  </message>
+  <message name="UPDCODIGOACESSOSOAPIN">
+    <part name="parameters" element="s0:UPDCODIGOACESSO" />
+  </message>
+  <message name="UPDCODIGOACESSOSOAPOUT">
+    <part name="parameters" element="s0:UPDCODIGOACESSORESPONSE" />
+  </message>
+  <message name="UPDCODIGOACESSOADMSOAPIN">
+    <part name="parameters" element="s0:UPDCODIGOACESSOADM" />
+  </message>
+  <message name="UPDCODIGOACESSOADMSOAPOUT">
+    <part name="parameters" element="s0:UPDCODIGOACESSOADMRESPONSE" />
+  </message>
+  <message name="UPDCOLETASOAPIN">
+    <part name="parameters" element="s0:UPDCOLETA" />
+  </message>
+  <message name="UPDCOLETASOAPOUT">
+    <part name="parameters" element="s0:UPDCOLETARESPONSE" />
+  </message>
+  <message name="UPDDESTINACAOSOAPIN">
+    <part name="parameters" element="s0:UPDDESTINACAO" />
+  </message>
+  <message name="UPDDESTINACAOSOAPOUT">
+    <part name="parameters" element="s0:UPDDESTINACAORESPONSE" />
+  </message>
+  <message name="UPDMANIFESTOSOAPIN">
+    <part name="parameters" element="s0:UPDMANIFESTO" />
+  </message>
+  <message name="UPDMANIFESTOSOAPOUT">
+    <part name="parameters" element="s0:UPDMANIFESTORESPONSE" />
+  </message>
+  <portType name="WSPAMBIENTALSOAP">
+    <operation name="GETBOLETO">
+      <documentation>Retorna Lista de Boletos</documentation>
+      <input message="s0:GETBOLETOSOAPIN" />
+      <output message="s0:GETBOLETOSOAPOUT" />
+    </operation>
+    <operation name="GETBOLETODETALHE">
+      <documentation>Retorna Detalhes do Boleto</documentation>
+      <input message="s0:GETBOLETODETALHESOAPIN" />
+      <output message="s0:GETBOLETODETALHESOAPOUT" />
+    </operation>
+    <operation name="GETCLIENTE">
+      <documentation>Retorna o Validação de Acesso do Cliente</documentation>
+      <input message="s0:GETCLIENTESOAPIN" />
+      <output message="s0:GETCLIENTESOAPOUT" />
+    </operation>
+    <operation name="GETMANIFESTO">
+      <documentation>Retorna o Manifesto para Transporte de Resíduos</documentation>
+      <input message="s0:GETMANIFESTOSOAPIN" />
+      <output message="s0:GETMANIFESTOSOAPOUT" />
+    </operation>
+    <operation name="GETMANIFESTOCLIENTE">
+      <documentation>Retorna o Manifesto para Transporte de Resíduos / Cliente</documentation>
+      <input message="s0:GETMANIFESTOCLIENTESOAPIN" />
+      <output message="s0:GETMANIFESTOCLIENTESOAPOUT" />
+    </operation>
+    <operation name="GETMANIFESTOCLIENTEDETALHE">
+      <documentation>Retorna o Manifesto para Transporte de Resíduos / Cliente Detalhe</documentation>
+      <input message="s0:GETMANIFESTOCLIENTEDETALHESOAPIN" />
+      <output message="s0:GETMANIFESTOCLIENTEDETALHESOAPOUT" />
+    </operation>
+    <operation name="GETMOTORISTA">
+      <documentation>Retorna o Cadastro de Motoristas</documentation>
+      <input message="s0:GETMOTORISTASOAPIN" />
+      <output message="s0:GETMOTORISTASOAPOUT" />
+    </operation>
+    <operation name="GETNOTAFISCAL">
+      <documentation>Retorna Dados das Notas Fiscais Emitidas</documentation>
+      <input message="s0:GETNOTAFISCALSOAPIN" />
+      <output message="s0:GETNOTAFISCALSOAPOUT" />
+    </operation>
+    <operation name="GETSERVICO">
+      <documentation>Retorna os Servicos Contratados pelo Cliente</documentation>
+      <input message="s0:GETSERVICOSOAPIN" />
+      <output message="s0:GETSERVICOSOAPOUT" />
+    </operation>
+    <operation name="GETSERVICODETALHE">
+      <documentation>Retorna os Detalhes Servicos Contratados pelo Cliente</documentation>
+      <input message="s0:GETSERVICODETALHESOAPIN" />
+      <output message="s0:GETSERVICODETALHESOAPOUT" />
+    </operation>
+    <operation name="GETVEICULO">
+      <documentation>Retorna o Veiculo</documentation>
+      <input message="s0:GETVEICULOSOAPIN" />
+      <output message="s0:GETVEICULOSOAPOUT" />
+    </operation>
+    <operation name="UPDCODIGOACESSO">
+      <documentation>Altera Codigo Acesso Restrito</documentation>
+      <input message="s0:UPDCODIGOACESSOSOAPIN" />
+      <output message="s0:UPDCODIGOACESSOSOAPOUT" />
+    </operation>
+    <operation name="UPDCODIGOACESSOADM">
+      <documentation>Altera Codigo Acesso Administrativo</documentation>
+      <input message="s0:UPDCODIGOACESSOADMSOAPIN" />
+      <output message="s0:UPDCODIGOACESSOADMSOAPOUT" />
+    </operation>
+    <operation name="UPDCOLETA">
+      <documentation>Grava Coleta</documentation>
+      <input message="s0:UPDCOLETASOAPIN" />
+      <output message="s0:UPDCOLETASOAPOUT" />
+    </operation>
+    <operation name="UPDDESTINACAO">
+      <documentation>Grava Destinação</documentation>
+      <input message="s0:UPDDESTINACAOSOAPIN" />
+      <output message="s0:UPDDESTINACAOSOAPOUT" />
+    </operation>
+    <operation name="UPDMANIFESTO">
+      <documentation>Grava Manifesto</documentation>
+      <input message="s0:UPDMANIFESTOSOAPIN" />
+      <output message="s0:UPDMANIFESTOSOAPOUT" />
+    </operation>
+  </portType>
+  <binding name="WSPAMBIENTALSOAP" type="s0:WSPAMBIENTALSOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GETBOLETO">
+      <soap:operation soapAction="http://android/GETBOLETO" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETBOLETODETALHE">
+      <soap:operation soapAction="http://android/GETBOLETODETALHE" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETCLIENTE">
+      <soap:operation soapAction="http://android/GETCLIENTE" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETMANIFESTO">
+      <soap:operation soapAction="http://android/GETMANIFESTO" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETMANIFESTOCLIENTE">
+      <soap:operation soapAction="http://android/GETMANIFESTOCLIENTE" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETMANIFESTOCLIENTEDETALHE">
+      <soap:operation soapAction="http://android/GETMANIFESTOCLIENTEDETALHE" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETMOTORISTA">
+      <soap:operation soapAction="http://android/GETMOTORISTA" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETNOTAFISCAL">
+      <soap:operation soapAction="http://android/GETNOTAFISCAL" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETSERVICO">
+      <soap:operation soapAction="http://android/GETSERVICO" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETSERVICODETALHE">
+      <soap:operation soapAction="http://android/GETSERVICODETALHE" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETVEICULO">
+      <soap:operation soapAction="http://android/GETVEICULO" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UPDCODIGOACESSO">
+      <soap:operation soapAction="http://android/UPDCODIGOACESSO" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UPDCODIGOACESSOADM">
+      <soap:operation soapAction="http://android/UPDCODIGOACESSOADM" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UPDCOLETA">
+      <soap:operation soapAction="http://android/UPDCOLETA" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UPDDESTINACAO">
+      <soap:operation soapAction="http://android/UPDDESTINACAO" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UPDMANIFESTO">
+      <soap:operation soapAction="http://android/UPDMANIFESTO" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WSPAMBIENTAL">
+    <documentation>Serviço de Coleta Ambiental</documentation>
+    <port name="WSPAMBIENTALSOAP" binding="s0:WSPAMBIENTALSOAP">
+      <soap:address location="http://172.27.72.4:8095/WSPAMBIENTAL.apw" />
+    </port>
+  </service>
+</definitions>

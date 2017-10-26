@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9CD32E2-8658-479F-B6EE-10FE575571A5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pioneira</RootNamespace>
+    <AssemblyName>Pioneira</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\Referencias\Referencias\DLLs\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Boleto.Net">
+      <HintPath>D:\Boleto Net\Boleto.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BoletoDetalhe.aspx" />
+    <Content Include="Boletos.aspx" />
+    <Content Include="Css\Estilo.css" />
+    <Content Include="DadosCadastrais.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\bg.jpg" />
+    <Content Include="Images\calendario.gif" />
+    <Content Include="Images\topo1.png" />
+    <Content Include="Images\topo.png" />
+    <Content Include="Images\topo2.png" />
+    <Content Include="Images\wbg.gif" />
+    <Content Include="Manifesto.aspx" />
+    <Content Include="ManifestoDetalhe.aspx" />
+    <Content Include="ManifestoLista.aspx" />
+    <Content Include="MP.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="MsgPioneira.aspx" />
+    <Content Include="Notas.aspx" />
+    <Content Include="Sair.aspx" />
+    <Content Include="SenhaAdmin.aspx" />
+    <Content Include="SenhaUser.aspx" />
+    <Content Include="ServicoDetalhe.aspx" />
+    <Content Include="Servicos.aspx" />
+    <Content Include="SolicitarServico.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoletoDetalhe.aspx.cs">
+      <DependentUpon>BoletoDetalhe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BoletoDetalhe.aspx.designer.cs">
+      <DependentUpon>BoletoDetalhe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Boletos.aspx.cs">
+      <DependentUpon>Boletos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Boletos.aspx.designer.cs">
+      <DependentUpon>Boletos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DadosCadastrais.aspx.cs">
+      <DependentUpon>DadosCadastrais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DadosCadastrais.aspx.designer.cs">
+      <DependentUpon>DadosCadastrais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manifesto.aspx.cs">
+      <DependentUpon>Manifesto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manifesto.aspx.designer.cs">
+      <DependentUpon>Manifesto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManifestoDetalhe.aspx.cs">
+      <DependentUpon>ManifestoDetalhe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManifestoDetalhe.aspx.designer.cs">
+      <DependentUpon>ManifestoDetalhe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManifestoLista.aspx.cs">
+      <DependentUpon>ManifestoLista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManifestoLista.aspx.designer.cs">
+      <DependentUpon>ManifestoLista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MP.Master.cs">
+      <DependentUpon>MP.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MP.Master.designer.cs">
+      <DependentUpon>MP.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MsgPioneira.aspx.cs">
+      <DependentUpon>MsgPioneira.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsgPioneira.aspx.designer.cs">
+      <DependentUpon>MsgPioneira.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notas.aspx.cs">
+      <DependentUpon>Notas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notas.aspx.designer.cs">
+      <DependentUpon>Notas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Sair.aspx.cs">
+      <DependentUpon>Sair.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sair.aspx.designer.cs">
+      <DependentUpon>Sair.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SenhaAdmin.aspx.cs">
+      <DependentUpon>SenhaAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SenhaAdmin.aspx.designer.cs">
+      <DependentUpon>SenhaAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SenhaUser.aspx.cs">
+      <DependentUpon>SenhaUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SenhaUser.aspx.designer.cs">
+      <DependentUpon>SenhaUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicoDetalhe.aspx.cs">
+      <DependentUpon>ServicoDetalhe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServicoDetalhe.aspx.designer.cs">
+      <DependentUpon>ServicoDetalhe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Servicos.aspx.cs">
+      <DependentUpon>Servicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Servicos.aspx.designer.cs">
+      <DependentUpon>Servicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitarServico.aspx.cs">
+      <DependentUpon>SolicitarServico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SolicitarServico.aspx.designer.cs">
+      <DependentUpon>SolicitarServico.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pioneira.BLL\Pioneira.BLL.csproj">
+      <Project>{C8578F66-C3D8-4095-8001-561E01C474AE}</Project>
+      <Name>Pioneira.BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54961</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
